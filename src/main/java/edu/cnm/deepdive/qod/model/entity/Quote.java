@@ -66,7 +66,7 @@ public class Quote implements FlatQuote {
   private String text;
 
   @ManyToOne(fetch = FetchType.EAGER,
-      cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+      cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH}) // CascadeType.PERSIST lets a JSON post write both quote & source
   @JoinColumn(name = "source_id")
   @JsonSerialize(as = FlatSource.class)
   private Source source;
