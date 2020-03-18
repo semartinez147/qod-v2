@@ -9,19 +9,14 @@ import org.springframework.lang.NonNull;
 @JsonPropertyOrder({"id", "created", "updated", "name", "href"})
 public interface FlatSource {
 
-  @NonNull
   UUID getId();
 
-  @NonNull
   Date getCreated();
 
-  @NonNull
   Date getUpdated();
 
-  @NonNull
   String getName();
 
-  @NonNull
   URI getHref();
 
 }
